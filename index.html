@@ -1,76 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<script
-src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<title>Form Validation using JavaScript</title>
-</head>
-<body>
-<div class="container">
-<div class="header">
-<h2>Registration Form</h2>
-</div>
-<form  action="" class="form">
-<div class="form-group">
-<label for="">UserName : </label>
-<input type="text" placeholder="username" id = "username"
+<html>
+ <head>
+        <title>My Login Page </title>
+        <link rel="stylesheet" href="style.css">
+         
+    </head>
+    <body >
 
-autocomplete="off">
-
-<i class="ion-ios-checkmark"></i>
-<i class="ion-android-alert"></i>
-<span></span>
-</div>
-
-<div class="form-group">
-<label for="">Email : </label>
-<input type="text" placeholder="email" id = "email"
-
-autocomplete="off">
-
-<i class="ion-ios-checkmark"></i>
-<i class="ion-android-alert"></i>
-<span></span>
-</div>
-<div class="form-group">
-<label for="">Phone Number : </label>
-<input type="text" placeholder="phonenumber" id =
-
-"phonenumber" autocomplete="off">
-
-<i class="ion-ios-checkmark"></i>
-<i class="ion-android-alert"></i>
-<span></span>
-</div>
-<div class="form-group">
-<label for="">Password : </label>
-<input type="password" placeholder="password" id =
-
-"password" autocomplete="off">
-
-<i class="ion-ios-checkmark"></i>
-<i class="ion-android-alert"></i>
-<span></span>
-</div>
-<div class="form-group">
-<label for="">Confirm Password : </label>
-<input type="password" placeholder="confirm password" id =
-
-"confirmpassword" autocomplete="off">
-
-<i class="ion-ios-checkmark"></i>
-<i class="ion-android-alert"></i>
-<span></span>
-</div>
-<button id = 'submit'>Submit</button>
-</form>
-</div>
-  <script="app.js"></script>
-</body>
+        <div class="container">
+        <div class="card">
+        <div class="inner-box" id="card">
+        <div class="card-front">
+          <h2> LOGIN </h2>
+            <form action="../index.html">
+              <input type="email" class="input-box" placeholder="Your Email Id"required>
+             <input type="password" class="input-box" placeholder="Your Password"required>
+            <button type="submit" class="submit-btn">Submit </button>
+            <input type="checkbox"> <span> Remember Me</span>
+            </form> 
+            <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+            <a href="">Forgot Password</a>
+        </div>
+        <div class="card-back">
+            <h2> REGISTER </h2>
+            <form >
+                <input type="text" class="input-box" placeholder="Your Name" required>
+              <input type="email" class="input-box" placeholder="Your Email Id"required>
+             <input type="password" class="input-box" placeholder="Your Password"required>
+            <button type="submit" class="submit-btn" >Submit </button>
+            <input type="checkbox"> <span>Remember Me</span>
+            </form> 
+            <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+            <a href="">Forgot Password</a>
+             
+        </div>
+        </div>
+        </div>
+        </div>
+        <script>
+            var card = document.getElementById("card");
+            function openRegister(){
+                card.style.transform = "rotateY(-180deg)";
+            }
+            function openLogin(){
+                card.style.transform = "rotateY(0deg)";
+            }
+            
+        </script>
+    </body>
 </html>
